@@ -1,0 +1,164 @@
+/* ----------- GLOBAL ----------- */
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ----------- HERO ----------- */
+.hero {
+  width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #8bb4ff, #e4ecff);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  color: #1e293b;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  background: #1e40af;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 15px rgba(30, 64, 175, 0.3);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  background: #1e3a8a;
+}
+
+/* ----------- SUBJECT SECTION ----------- */
+.subjects {
+  padding: 60px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* ----------- SUBJECT CARDS GRID ----------- */
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ----------- GLASS SUBJECT CARD ----------- */
+.subject-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  cursor: pointer;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.subject-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.subject-card p {
+  font-size: 14px;
+  color: #475569;
+  margin-top: 8px;
+}
+
+.view-btn {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* ----------- NO DATA ----------- */
+.no-data {
+  grid-column: span 4;
+  text-align: center;
+  font-size: 18px;
+  color: #6b7280;
+}
+
+/* ----------- ANIMATION ----------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------- RESPONSIVE ----------- */
+
+/* 4 → 3 */
+@media (max-width: 1024px) {
+  .subject-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 3 → 2 */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 34px;
+  }
+
+  .subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2 → 1 */
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .subject-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

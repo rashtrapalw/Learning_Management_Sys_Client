@@ -1,0 +1,123 @@
+/* Background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  animation: fadeUp 0.8s ease;
+}
+
+/* Header */
+.login-header h2 {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.login-header p {
+  color: #e3e3e3;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Input Field */
+.input-field {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.input-field input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #2196f3;
+}
+
+/* Floating Label */
+.input-field label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label {
+  top: -6px;
+  left: 8px;
+  font-size: 12px;
+  color: #2196f3;
+  background: white;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  background: #0066ff;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #0051cc;
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .login-card {
+    padding: 25px 20px;
+  }
+
+  .login-header h2 {
+    font-size: 22px;
+  }
+}

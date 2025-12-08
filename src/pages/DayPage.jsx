@@ -19,20 +19,19 @@ export default function DayPage(){
 
   return (
     <div>
-      <h4>{day ? day.title : 'Day'}</h4>
-      <div>
-        {links.map(l => (
-          <div key={l._id} className="card mb-2">
-            <div className="card-body">
-              <h6>{l.title || l.type}</h6>
-              <p className="mb-1"><a href={l.url} target="_blank" rel="noreferrer">{l.url}</a></p>
-              <small className="text-muted">{new Date(l.createdAt).toLocaleString()}</small>
-            </div>
-          </div>
-        ))}
-        {links.length === 0 && <p>No links yet.</p>}
-      </div>
-      <Link className="btn btn-secondary mt-3" to="/">Back</Link>
+      
+      <h4>{day ? day.title : "Day"}</h4>
+
+<div className="card p-3 mb-3">
+  <h6>Recording</h6>
+  <a href={day?.recordingLink} target="_blank">{day?.recordingLink}</a>
+
+  <h6 className="mt-3">Notes</h6>
+  <a href={day?.notesLink} target="_blank">{day?.notesLink}</a>
+</div>
+
     </div>
+
+    
   );
 }

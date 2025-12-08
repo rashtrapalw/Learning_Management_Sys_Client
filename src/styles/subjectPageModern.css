@@ -1,0 +1,127 @@
+/* ---- Page Container ---- */
+.subject-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.subject-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+/* ---- Card Grid (4 per row) ---- */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* ---- Card ---- */
+.day-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.day-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ---- Card Content ---- */
+.day-card-content h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.day-number {
+  display: inline-block;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 14px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+/* ---- Buttons ---- */
+.day-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.day-btn {
+  flex: 1;
+  text-align: center;
+  margin-right: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+/* Remove last card margin */
+.day-btn:last-child {
+  margin-right: 0;
+}
+
+/* Button Colors */
+.recording-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.recording-btn:hover {
+  background: #1e40af;
+}
+
+.notes-btn {
+  background: #059669;
+  color: white;
+}
+
+.notes-btn:hover {
+  background: #047857;
+}
+
+/* ---- No Days ---- */
+.no-days {
+  grid-column: span 4;
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+  color: #555;
+}
+
+/* ---- Responsive Screens ---- */
+@media (max-width: 1024px) {
+  .days-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .days-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .days-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
