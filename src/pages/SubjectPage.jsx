@@ -140,7 +140,14 @@ export default function SubjectPage() {
             </div>
           ))
         ) : (
-          <p className="no-days">No days yet.</p>
+          // <p className="no-days">No days yet.</p>
+          <div className="loading-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+
         )}
       </div>
     </div>
