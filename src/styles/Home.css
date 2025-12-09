@@ -162,3 +162,71 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+/* loading animation */
+
+/* Skeleton Wrapper Grid */
+.skeleton-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Card Shape */
+.skeleton-card {
+  background: #ffffff17;
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(7px);
+  border: 1px solid #ffffff2f;
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* Skeleton Animating Gradient */
+.skeleton-title,
+.skeleton-text,
+.skeleton-btn {
+  background: linear-gradient(90deg, #dddddd30, #ffffff40, #dddddd30);
+  background-size: 200%;
+  border-radius: 6px;
+  animation: shimmer 1.4s infinite;
+}
+
+/* Different Sizes */
+.skeleton-title {
+  width: 70%;
+  height: 20px;
+  margin-bottom: 12px;
+}
+
+.skeleton-text {
+  width: 90%;
+  height: 14px;
+  margin-bottom: 16px;
+}
+
+.skeleton-btn {
+  width: 40%;
+  height: 16px;
+}
+
+/* Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -181,7 +181,24 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <p className="no-data">No subjects found.</p>
+            // <p className="no-data">Recording is Loading ...</p>
+            //  <div className="loading-dots">
+            //   <span></span>
+            //   <span></span>
+            //   <span></span>
+            // </div>
+
+            <div className="skeleton-wrapper">
+              {[1, 2, 3, 4].map((n) => (
+                <div className="skeleton-card" key={n}>
+                  <div className="skeleton-title"></div>
+                  <div className="skeleton-text"></div>
+                  <div className="skeleton-btn"></div>
+                </div>
+              ))}
+            </div>
+
+
           )}
         </div>
       </section>
