@@ -152,9 +152,11 @@ export default function Home() {
       {/* ---------------- HERO ---------------- */}
       <section className="hero">
         <div className="hero-content">
-          <h1>Learn. Grow. Achieve.</h1>
-          <p>Your personalized Learning Management System</p>
-          <button className="hero-btn" onClick={() => navigate("/subjects")}>
+          <h1>Wait. Few. Seconds.</h1>
+          <p>Wait few seconds for the content to load.</p>
+          {/* <button className="hero-btn" onClick={() => navigate("/subjects")}> */}
+          <button className="hero-btn" href="#subjects">  
+
             Scroll Down to Explore Subjects
           </button>
         </div>

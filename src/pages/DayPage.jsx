@@ -26,7 +26,7 @@ export default function DayPage(){
   <h6>Recording</h6>
   <a href={day?.recordingLink} target="_blank">{day?.recordingLink}</a>
 
-  <h6 className="mt-3">Notes</h6>
+  <h6 className="mt-3">Notes/Code</h6>
   <a href={day?.notesLink} target="_blank">{day?.notesLink}</a>
 </div>
 
