@@ -1,0 +1,161 @@
+/* =========================
+   USER DASHBOARD ONLY
+   ========================= */
+
+.user-dashboard-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+/* Card */
+.dashboard-card {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.dashboard-header h2 {
+  color: #1e293b;
+}
+
+/* Logout */
+.logout-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Section titles */
+.section-title {
+  margin: 20px 0 12px;
+  color: #334155;
+}
+
+/* Add Video Form */
+.add-video-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.add-video-form input {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1.5px solid #c7d2fe;
+  font-size: 14px;
+}
+
+.add-video-form input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.add-video-form button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0 18px;
+  cursor: pointer;
+}
+
+.add-video-form button:hover {
+  background: #4338ca;
+}
+
+/* Video List */
+.video-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.video-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.video-item strong {
+  display: block;
+  color: #1e293b;
+}
+
+.video-item span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Actions */
+.video-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.video-actions a {
+  background: #22c55e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.video-actions a:hover {
+  background: #16a34a;
+}
+
+.video-actions button {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.video-actions button:hover {
+  background: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-video-form {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

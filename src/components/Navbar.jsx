@@ -1,66 +1,3 @@
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "../styles/navbar.css";
-
-// export default function Navbar() {
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <nav className="nav">
-//       <div className="nav-container">
-
-//         <Link className="nav-logo" to="/">My LMS</Link>
-
-//         <div className="nav-toggle" onClick={() => setOpen(!open)}>
-//           <span></span><span></span><span></span>
-//         </div>
-
-//         <div className={`nav-links ${open ? "open" : ""}`}>
-//           <Link to="/admin/login" className="nav-btn">Admin</Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// }
-
-
-
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import "../styles/navbar.css";
-
-// export default function Navbar() {
-//   const [open, setOpen] = useState(false);
-
-//   return (
-//     <nav className="glass-nav">
-//       <div className="nav-container">
-
-//         <Link to="/" className="logo">Coading Library</Link>
-
-//         <div
-//           className={`nav-toggle ${open ? "active" : ""}`}
-//           onClick={() => setOpen(!open)}
-//         >
-//           <span></span><span></span><span></span>
-//         </div>
-
-
-
-
-
-
-//         <div className={`nav-links ${open ? "open" : ""}`}>
-//           <Link to="/admin/login" className="nav-btn">
-//             Admin Login
-//           </Link>
-//         </div>
-
-//       </div>
-//     </nav>
-//   );
-// }
-
 
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -80,7 +17,7 @@ export default function Navbar() {
     <nav className="glass-nav">
       <div className="nav-container">
 
-        <Link to="/" className="logo">Coading Library</Link>
+        <Link to="/" className="logo">Recording Library</Link>
 
         {/* SEARCHBAR */}
         <input
@@ -98,11 +35,30 @@ export default function Navbar() {
           <span></span><span></span><span></span>
         </div>
 
-        <div className={`nav-links ${open ? "open" : ""}`}>
+        {/* <div className={`nav-links ${open ? "open" : ""}`}>
           <Link to="/admin/login" className="nav-btn">
             Admin Login
           </Link>
         </div>
+
+      <div className={`nav-links ${open ? "open" : ""}`}>
+        <Link to="/user/login" className="nav-btn">
+          User Login
+        </Link>
+      </div>
+
+      <div className={`nav-links ${open ? "open" : ""}`}>
+        <Link to="/user/register" className="nav-btn">
+          Register
+        </Link>
+        </div> */}
+
+    <Link to="/login" className="nav-btn">
+        Login
+      </Link>
+
+
+        
 
       </div>
     </nav>
