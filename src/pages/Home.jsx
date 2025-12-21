@@ -75,7 +75,7 @@ export default function Home() {
   // ---------------- FETCH USER VIDEOS ----------------
   const fetchVideos = async () => {
     try {
-      const res = await userApi.get("api/video/all"); // get all videos
+      const res = await userApi.get("/video/all"); // get all videos
       setVideos(res.data);
     } catch (error) {
       console.error("Failed to load videos", error);
