@@ -148,3 +148,42 @@
   opacity: 0.8;
   font-size: 14px;
 }
+
+
+
+
+/* Table layout */
+.admin-users-table {
+  width: 100%;
+}
+
+/* Email column - show FULL email */
+.email-cell {
+  white-space: normal;        /* allow wrapping */
+  word-break: break-word;     /* break long email */
+  max-width: 100%;
+}
+
+/* Small columns */
+.small-col {
+  width: 80px;
+  text-align: center;
+}
+
+.action-col {
+  width: 80px;
+  text-align: center;
+}
+
+/* Mobile tuning */
+@media (max-width: 576px) {
+  th, td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .btn {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}
