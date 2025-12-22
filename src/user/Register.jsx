@@ -58,7 +58,7 @@ export default function Register() {
 
     try {
       // calling backend register API
-      await API.post("/api/user/register", {
+      await API.post("user/register", {
         name,
         email,
         password,

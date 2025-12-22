@@ -70,7 +70,7 @@ export default function Login() {
     e.preventDefault();
 
     try {
-      const res = await API.post("/api/user/login", { email, password });
+      const res = await API.post("user/login", { email, password });
 
       loginUser(res.data.token, res.data.name);
       alert("Login Successful");

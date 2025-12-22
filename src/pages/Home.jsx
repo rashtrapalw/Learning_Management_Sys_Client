@@ -51,7 +51,7 @@ import api from "../api/api"; // existing API for subjects
 import userApi from "../api/userApi"; // new API for user videos
 import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/Home.css";
-import Chatbot from "../chatbot/Chatbot";
+// import Chatbot from "../chatbot/Chatbot";
 
 export default function Home() {
   const [subjects, setSubjects] = useState([]);
@@ -75,7 +75,7 @@ export default function Home() {
   // ---------------- FETCH USER VIDEOS ----------------
   const fetchVideos = async () => {
     try {
-      const res = await userApi.get("/video/all"); // get all videos
+      const res = await userApi.get("api/video/all"); // get all videos
       setVideos(res.data);
     } catch (error) {
       console.error("Failed to load videos", error);
@@ -97,7 +97,7 @@ export default function Home() {
           <button className="hero-btn" href="#subjects">
             Scroll Down to Explore Subjects
           </button>
-          <Chatbot />
+          {/* <Chatbot /> */}
         </div>
       </section>
 

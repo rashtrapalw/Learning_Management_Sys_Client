@@ -71,59 +71,6 @@ export default function UserDashboard() {
     }
   };
 
-//   return (
-//     <div className="dashboard">
-//       <h2>Welcome, {user}</h2>
-
-//       <button onClick={logoutUser}>Logout</button>
-
-//       <h3>Add New Video</h3>
-//       <form onSubmit={handleAdd}>
-//         <input
-//           placeholder="Video Topic"
-//           value={topic}              // controlled input
-//           onChange={(e) => setTopic(e.target.value)}
-//           required
-//         />
-
-//         <input
-//           placeholder="Subject"
-//           value={subject}
-//           onChange={(e) => setSubject(e.target.value)}
-//           required
-//         />
-
-//         <input
-//           placeholder="Video Link"
-//           value={videoLink}
-//           onChange={(e) => setVideoLink(e.target.value)}
-//           required
-//         />
-
-//         <button type="submit">Add Video..</button>
-//       </form>
-
-//       <h3>Your Videos</h3>
-//       <ul>
-//         {videos.map((v) => (
-//           <li key={v._id}>
-//             <strong>{v.topic}</strong> — {v.subject}
-//             <br />
-
-//             <a href={v.videoLink} target="_blank" rel="noreferrer">
-//               Watch Video
-//             </a>
-
-//             <br />
-//             <button onClick={() => deleteVideo(v._id)}>
-//               Delete
-//             </button>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-
 
 return (
   <div className="user-dashboard-page">

@@ -109,9 +109,9 @@ export default function AdminLogin() {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await api.post("/auth/login", { email, password });
+      const res = await api.post("auth/login", { email, password });
       localStorage.setItem("admin_token", res.data.token);
-      nav("/admin/dashboard");
+      nav("admin/dashboard");
     } catch {
       alert("Login failed. Please check your credentials.");
     }
